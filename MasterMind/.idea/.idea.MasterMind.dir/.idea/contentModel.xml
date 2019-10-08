@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_.19.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Constants" t="Include">
+        <e p="Constant.cs" t="Include" />
+      </e>
+      <e p="Enums" t="Include">
+        <e p="GuessColour.cs" t="Include" />
+        <e p="HintColour.cs" t="Include" />
+      </e>
+      <e p="GamePlay" t="Include">
+        <e p="Game.cs" t="Include" />
+        <e p="GameEngine.cs" t="Include" />
+        <e p="IGame.cs" t="Include" />
+      </e>
+      <e p="GameServices" t="Include">
+        <e p="Counter" t="Include">
+          <e p="GuessCounter.cs" t="Include" />
+          <e p="IGuessCounter.cs" t="Include" />
+        </e>
+        <e p="Input" t="Include">
+          <e p="Processor" t="Include">
+            <e p="IInputProcessor.cs" t="Include" />
+            <e p="InputProcessor.cs" t="Include" />
+          </e>
+          <e p="Validations" t="Include">
+            <e p="InputValidations" t="Include">
+              <e p="ColourValidation.cs" t="Include" />
+              <e p="IValidation.cs" t="Include" />
+              <e p="WordCountValidation.cs" t="Include" />
+            </e>
+            <e p="ValidationResults" t="Include">
+              <e p="FailingValidation.cs" t="Include" />
+              <e p="IValidationResult.cs" t="Include" />
+              <e p="SuccesfulValidation.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Validator" t="Include">
+            <e p="IInputValidator.cs" t="Include" />
+            <e p="InputValidator.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Output" t="Include">
+          <e p="IMessageFormatter.cs" t="Include" />
+          <e p="MessageFormatter.cs" t="Include" />
+        </e>
+        <e p="Players" t="Include">
+          <e p="ComputerPlayer.cs" t="Include" />
+          <e p="IComputerPlayer.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure" t="Include">
+        <e p="ConsoleIoService.cs" t="Include" />
+        <e p="IConsoleDisplayService.cs" t="Include" />
+      </e>
+      <e p="MasterMind.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.2" t="Include">
+            <e p="MasterMind.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+    </e>
+  </component>
+</project>
