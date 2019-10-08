@@ -6,8 +6,4 @@
         <RootNamespace>Mastermind</RootNamespace>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="GameServices\Input\Converter" />
-    </ItemGroup>
-
 </Project>

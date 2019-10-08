@@ -84,7 +84,9 @@
         <e p="ColourValidationTests.cs" t="Include" />
         <e p="GameCheckMethodTests.cs" t="Include" />
         <e p="GetUserColourGuessTests.cs" t="Include" />
+        <e p="GetValidationResultsTests.cs" t="Include" />
         <e p="GuessCounterTests.cs" t="Include" />
+        <e p="InputValidatorTests.cs" t="Include" />
         <e p="MastermindTests.csproj" t="IncludeRecursive" />
         <e p="MessageFormatterTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -94,7 +96,6 @@
             </e>
           </e>
         </e>
-        <e p="WordCountValidationTests.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
