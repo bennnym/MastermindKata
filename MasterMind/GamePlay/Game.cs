@@ -40,14 +40,14 @@ namespace Mastermind.GamePlay
         }
 
         private void SetNonPositionMatchesToHints(IReadOnlyList<GuessColour> userGuess,
-             List<HintColour> hints)
+            List<HintColour> hints)
         {
             var computerSelection = _computerPlayer.GetCodeSelection();
 
             var unmatchedComputerSelection = GetHintSubsetThatDontHaveExactMatches(computerSelection, userGuess);
             var unmatchedUserSelection = GetHintSubsetThatDontHaveExactMatches(userGuess, computerSelection);
 
-            AddWhiteHintsToList(unmatchedComputerSelection, unmatchedUserSelection,  hints);
+            AddWhiteHintsToList(unmatchedComputerSelection, unmatchedUserSelection, hints);
         }
 
         private static List<GuessColour> GetHintSubsetThatDontHaveExactMatches(IEnumerable<GuessColour> guessColours,
