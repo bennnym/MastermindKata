@@ -9,15 +9,16 @@ namespace Mastermind.GamePlay
     public class Game : IGame
     {
         private readonly IComputerPlayer _computerPlayer;
+
         public Game(IComputerPlayer computerPlayer)
         {
             _computerPlayer = computerPlayer;
         }
-        
+
         public IEnumerable<HintColour> Check(GuessColour[] usersGuess)
         {
             var hints = SetExactMatchesToHints(usersGuess);
-            SetNonPositionMatchesToHints(usersGuess,ref hints);
+            SetNonPositionMatchesToHints(usersGuess, hints);
             return ShuffleHints(hints);
         }
 
@@ -25,13 +26,13 @@ namespace Mastermind.GamePlay
         {
             _computerPlayer.SetHiddenCode();
         }
-        
+
         private List<HintColour> SetExactMatchesToHints(IEnumerable<GuessColour> usersGuess)
         {
             var numberOfExactMatches = CalculateExactMatchesInUsersGuess(usersGuess);
             return Enumerable.Repeat(HintColour.Black, numberOfExactMatches).ToList();
         }
-        
+
         private int CalculateExactMatchesInUsersGuess(IEnumerable<GuessColour> userGuess)
         {
             var computerSelection = _computerPlayer.GetCodeSelection();
@@ -39,16 +40,16 @@ namespace Mastermind.GamePlay
         }
 
         private void SetNonPositionMatchesToHints(IReadOnlyList<GuessColour> userGuess,
-            ref List<HintColour> hints)
+             List<HintColour> hints)
         {
             var computerSelection = _computerPlayer.GetCodeSelection();
 
             var unmatchedComputerSelection = GetHintSubsetThatDontHaveExactMatches(computerSelection, userGuess);
             var unmatchedUserSelection = GetHintSubsetThatDontHaveExactMatches(userGuess, computerSelection);
 
-            AddWhiteHintsToList(unmatchedComputerSelection, unmatchedUserSelection,ref hints);
+            AddWhiteHintsToList(unmatchedComputerSelection, unmatchedUserSelection,  hints);
         }
-        
+
         private static List<GuessColour> GetHintSubsetThatDontHaveExactMatches(IEnumerable<GuessColour> guessColours,
             IReadOnlyList<GuessColour> comparingList)
         {
@@ -56,7 +57,7 @@ namespace Mastermind.GamePlay
         }
 
         private static void AddWhiteHintsToList(IEnumerable<GuessColour> userSelection,
-            ICollection<GuessColour> computerSelection,ref List<HintColour> hints)
+            ICollection<GuessColour> computerSelection, ICollection<HintColour> hints)
         {
             foreach (var guess in userSelection)
             {
