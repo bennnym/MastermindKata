@@ -12,7 +12,7 @@ namespace Mastermind
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var validations = new List<IValidation>()
             {

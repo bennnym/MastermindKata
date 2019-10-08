@@ -10,7 +10,7 @@
     <e p="$PROJECT_DIR$/../Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$/../Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
-      <e p="Myob.Fma.Mastermind" t="IncludeRecursive">
+      <e p="MasterMind" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Charts" t="Include">
           <e p="Mastermind Class Flowchart" t="Include" />
@@ -69,27 +69,28 @@
           <e p="ConsoleIoService.cs" t="Include" />
           <e p="IConsoleDisplayService.cs" t="Include" />
         </e>
-        <e p="Myob.Fma.Mastermind.csproj" t="IncludeRecursive" />
+        <e p="MasterMind.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="Myob.Fma.Mastermind.AssemblyInfo.cs" t="Include" />
+              <e p="MasterMind.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
       </e>
-      <e p="Myob.Fma.MastermindTests" t="IncludeRecursive">
+      <e p="MastermindTests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="ColourValidationTests.cs" t="Include" />
         <e p="GameCheckMethodTests.cs" t="Include" />
         <e p="GetUserColourGuessTests.cs" t="Include" />
+        <e p="GuessCounterTests.cs" t="Include" />
+        <e p="MastermindTests.csproj" t="IncludeRecursive" />
         <e p="MessageFormatterTests.cs" t="Include" />
-        <e p="Myob.Fma.MastermindTests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="Myob.Fma.MastermindTests.AssemblyInfo.cs" t="Include" />
+              <e p="MastermindTests.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
