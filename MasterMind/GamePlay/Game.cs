@@ -41,7 +41,7 @@ namespace Mastermind.GamePlay
             return userGuess.Where((colour, index) => colour == computerSelection[index]).Count();
         }
 
-        private List<HintColour> SetNonPositionMatchesToHints(IReadOnlyList<GuessColour> userGuess)
+        private IEnumerable<HintColour> SetNonPositionMatchesToHints(IReadOnlyList<GuessColour> userGuess)
         {
             var computerSelection = _computerPlayer.GetCodeSelection();
 
@@ -57,7 +57,7 @@ namespace Mastermind.GamePlay
             return guessColours.Where((colour, index) => colour != comparingList[index]).ToList();
         }
 
-        private static List<HintColour> AddWhiteHintsToList(IEnumerable<GuessColour> userSelection,
+        private static IEnumerable<HintColour> AddWhiteHintsToList(IEnumerable<GuessColour> userSelection,
             ICollection<GuessColour> computerSelection)
         {
             var whiteHints = new List<HintColour>();
@@ -69,7 +69,6 @@ namespace Mastermind.GamePlay
                     computerSelection.Remove(guess);
                 }
             }
-
             return whiteHints;
         }
 
