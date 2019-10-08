@@ -17,9 +17,11 @@ namespace Mastermind.GamePlay
 
         public IEnumerable<HintColour> Check(GuessColour[] usersGuess)
         {
-            var hints = SetExactMatchesToHints(usersGuess);
-            SetNonPositionMatchesToHints(usersGuess, hints);
-            return ShuffleHints(hints);
+            var blackHints = SetExactMatchesToHints(usersGuess);
+            var whiteHints = SetNonPositionMatchesToHints(usersGuess);
+            var allHints = blackHints.Concat(whiteHints);
+            
+            return ShuffleHints(allHints);
         }
 
         public void SetComputerPlayersCode()
@@ -39,15 +41,14 @@ namespace Mastermind.GamePlay
             return userGuess.Where((colour, index) => colour == computerSelection[index]).Count();
         }
 
-        private void SetNonPositionMatchesToHints(IReadOnlyList<GuessColour> userGuess,
-            List<HintColour> hints)
+        private List<HintColour> SetNonPositionMatchesToHints(IReadOnlyList<GuessColour> userGuess)
         {
             var computerSelection = _computerPlayer.GetCodeSelection();
 
             var unmatchedComputerSelection = GetHintSubsetThatDontHaveExactMatches(computerSelection, userGuess);
             var unmatchedUserSelection = GetHintSubsetThatDontHaveExactMatches(userGuess, computerSelection);
 
-            AddWhiteHintsToList(unmatchedComputerSelection, unmatchedUserSelection, hints);
+            return AddWhiteHintsToList(unmatchedComputerSelection, unmatchedUserSelection);
         }
 
         private static List<GuessColour> GetHintSubsetThatDontHaveExactMatches(IEnumerable<GuessColour> guessColours,
@@ -56,17 +57,20 @@ namespace Mastermind.GamePlay
             return guessColours.Where((colour, index) => colour != comparingList[index]).ToList();
         }
 
-        private static void AddWhiteHintsToList(IEnumerable<GuessColour> userSelection,
-            ICollection<GuessColour> computerSelection, ICollection<HintColour> hints)
+        private static List<HintColour> AddWhiteHintsToList(IEnumerable<GuessColour> userSelection,
+            ICollection<GuessColour> computerSelection)
         {
+            var whiteHints = new List<HintColour>();
             foreach (var guess in userSelection)
             {
                 if (computerSelection.Contains(guess))
                 {
-                    hints.Add(HintColour.White);
+                    whiteHints.Add(HintColour.White);
                     computerSelection.Remove(guess);
                 }
             }
+
+            return whiteHints;
         }
 
         private static IEnumerable<HintColour> ShuffleHints(IEnumerable<HintColour> hints)
