@@ -29,7 +29,7 @@ namespace Mastermind.GamePlay
             _computerPlayer.SetHiddenCode();
         }
 
-        private List<HintColour> SetExactMatchesToHints(IEnumerable<GuessColour> usersGuess)
+        private IEnumerable<HintColour> SetExactMatchesToHints(IEnumerable<GuessColour> usersGuess)
         {
             var numberOfExactMatches = CalculateExactMatchesInUsersGuess(usersGuess);
             return Enumerable.Repeat(HintColour.Black, numberOfExactMatches).ToList();
