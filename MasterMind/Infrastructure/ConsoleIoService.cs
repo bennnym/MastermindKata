@@ -14,9 +14,9 @@ namespace Mastermind.Infrastructure
             return Console.ReadLine();
         }
 
-        public void ExitApplication() // move this to guess limit validations?
+        public void ExitApplication() 
         {
-            Environment.Exit(0); // bound to console - add to its class
+            Environment.Exit(0); 
         }
     }
 }

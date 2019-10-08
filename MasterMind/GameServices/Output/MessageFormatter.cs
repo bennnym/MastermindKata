@@ -6,9 +6,9 @@ namespace Mastermind.GameServices.Output
 {
     public class MessageFormatter : IMessageFormatter
     {
-        public string GetHintMessage(IEnumerable<HintColour> hintColours)
+        public string GetHintMessage(IEnumerable<HintColour> hints)
         {
-            var hintString = TransformHintColourEnumerableToString(hintColours);
+            var hintString = TransformHintColourEnumerableToString(hints);
             
             if (hintString == string.Empty)
             {
