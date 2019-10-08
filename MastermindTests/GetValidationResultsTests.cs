@@ -5,11 +5,11 @@ using Xunit;
 
 namespace MastermindTests
 {
-    public class WordCountValidationTests
+    public class GetValidationResultsTests
     {
         private readonly InputValidator _inputValidatorWordLength;
 
-        public WordCountValidationTests()
+        public GetValidationResultsTests()
         {
             _inputValidatorWordLength = new InputValidator(
                 new List<IValidation>()
