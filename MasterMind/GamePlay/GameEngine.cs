@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Mastermind.Constants;
 using Mastermind.Enums;
@@ -9,6 +10,7 @@ using Mastermind.Infrastructure;
 
 namespace Mastermind.GamePlay
 {
+    [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
     public class GameEngine
     {
         private readonly IInputProcessor _inputProcessor;

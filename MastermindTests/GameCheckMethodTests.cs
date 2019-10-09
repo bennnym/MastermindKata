@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Mastermind.Enums;
 using Mastermind.GamePlay;
@@ -67,6 +68,7 @@ namespace MastermindTests
 
         [Theory]
         [MemberData(nameof(MixOfMatches))]
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
         public void Should_Return_Amount_Of_Black_And_White_Hints_According_To_Matches(GuessColour[] computerGuess,
             GuessColour[] playerGuess, int expectedBlackHints, int expectedWhiteHints)
         {
