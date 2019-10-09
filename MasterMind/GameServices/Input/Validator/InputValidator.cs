@@ -6,6 +6,7 @@ using Mastermind.Constants;
 using Mastermind.Enums;
 using Mastermind.GameServices.Input.Validations.InputValidations;
 using Mastermind.GameServices.Input.Validations.ValidationResults;
+using Mastermind.StringMethods;
 
 namespace Mastermind.GameServices.Input.Validator
 {
@@ -36,13 +37,11 @@ namespace Mastermind.GameServices.Input.Validator
 
         public GuessColour[] GetValidColours(string usersGuess)
         {
-            var usersGuessCapitalized = usersGuess.ToUpper();
-
             var colourMatches = new Regex(Constant.RegexColourPattern);
 
             return colourMatches
-                .Matches(usersGuessCapitalized)
-                .Select(m => (GuessColour) Enum.Parse(typeof(GuessColour), m.Value))
+                .Matches(usersGuess)
+                .Select(m => (GuessColour) Enum.Parse(typeof(GuessColour), StringFormatter.Capitalize(m.Value)))
                 .ToArray();
         }
     }

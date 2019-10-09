@@ -37,22 +37,22 @@ namespace MastermindTests
                 new object[]
                 {
                     "red yellow purple green",
-                    new List<GuessColour>() {GuessColour.RED, GuessColour.YELLOW, GuessColour.PURPLE, GuessColour.GREEN}
+                    new List<GuessColour>() {GuessColour.Red, GuessColour.Yellow, GuessColour.Purple, GuessColour.Green}
                 },
                 new object[]
                 {
                     "red red red red",
-                    new List<GuessColour>() {GuessColour.RED, GuessColour.RED, GuessColour.RED, GuessColour.RED}
+                    new List<GuessColour>() {GuessColour.Red, GuessColour.Red, GuessColour.Red, GuessColour.Red}
                 },
                 new object[]
                 {
                     "red yellow blue green",
-                    new List<GuessColour>() {GuessColour.RED, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.GREEN}
+                    new List<GuessColour>() {GuessColour.Red, GuessColour.Yellow, GuessColour.Blue, GuessColour.Green}
                 },
                 new object[]
                 {
                     "red orange blue green",
-                    new List<GuessColour>() {GuessColour.RED, GuessColour.ORANGE, GuessColour.BLUE, GuessColour.GREEN}
+                    new List<GuessColour>() {GuessColour.Red, GuessColour.Orange, GuessColour.Blue, GuessColour.Green}
                 },
             };
     }

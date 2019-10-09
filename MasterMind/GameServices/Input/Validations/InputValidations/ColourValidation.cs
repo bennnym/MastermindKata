@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Mastermind.Constants;
 using Mastermind.Enums;
+using Mastermind.StringMethods;
 
 namespace Mastermind.GameServices.Input.Validations.InputValidations
 {
@@ -10,13 +11,11 @@ namespace Mastermind.GameServices.Input.Validations.InputValidations
     {
         public bool IsValid(string userInput)
         {
-            var usersGuessCapitalized = userInput.ToUpper();
-
             var colourMatches = new Regex(Constant.RegexColourPattern);
 
             var validColoursMatched = colourMatches
-                .Matches(usersGuessCapitalized)
-                .Select(m => (GuessColour) Enum.Parse(typeof(GuessColour), m.Value));
+                .Matches(userInput)
+                .Select(m => (GuessColour) Enum.Parse(typeof(GuessColour), StringFormatter.Capitalize(m.Value)));
             
             return validColoursMatched.Count() == 4;
         }

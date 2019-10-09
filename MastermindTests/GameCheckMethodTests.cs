@@ -24,8 +24,8 @@ namespace MastermindTests
         {
             // Arrange
   
-            var allRedCode = new[] {GuessColour.RED, GuessColour.RED, GuessColour.RED, GuessColour.RED};
-            var allBlueGuess = new[] {GuessColour.BLUE, GuessColour.BLUE, GuessColour.BLUE, GuessColour.BLUE};
+            var allRedCode = new[] {GuessColour.Red, GuessColour.Red, GuessColour.Red, GuessColour.Red};
+            var allBlueGuess = new[] {GuessColour.Blue, GuessColour.Blue, GuessColour.Blue, GuessColour.Blue};
 
             // Act
             _computerPlayer.Setup(i => i.GetCodeSelection()).Returns(allRedCode);
@@ -88,50 +88,50 @@ namespace MastermindTests
             {
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.RED, GuessColour.RED, GuessColour.RED},
-                    new[] {GuessColour.RED, GuessColour.BLUE, GuessColour.BLUE, GuessColour.BLUE},
+                    new[] {GuessColour.Red, GuessColour.Red, GuessColour.Red, GuessColour.Red},
+                    new[] {GuessColour.Red, GuessColour.Blue, GuessColour.Blue, GuessColour.Blue},
                     new[] {HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.GREEN, GuessColour.YELLOW, GuessColour.ORANGE, GuessColour.RED},
-                    new[] {GuessColour.BLUE, GuessColour.BLUE, GuessColour.BLUE, GuessColour.RED},
+                    new[] {GuessColour.Green, GuessColour.Yellow, GuessColour.Orange, GuessColour.Red},
+                    new[] {GuessColour.Blue, GuessColour.Blue, GuessColour.Blue, GuessColour.Red},
                     new[] {HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.PURPLE, GuessColour.PURPLE, GuessColour.PURPLE, GuessColour.PURPLE},
-                    new[] {GuessColour.BLUE, GuessColour.PURPLE, GuessColour.BLUE, GuessColour.RED},
+                    new[] {GuessColour.Purple, GuessColour.Purple, GuessColour.Purple, GuessColour.Purple},
+                    new[] {GuessColour.Blue, GuessColour.Purple, GuessColour.Blue, GuessColour.Red},
                     new[] {HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.RED, GuessColour.RED, GuessColour.RED},
-                    new[] {GuessColour.RED, GuessColour.RED, GuessColour.BLUE, GuessColour.BLUE},
+                    new[] {GuessColour.Red, GuessColour.Red, GuessColour.Red, GuessColour.Red},
+                    new[] {GuessColour.Red, GuessColour.Red, GuessColour.Blue, GuessColour.Blue},
                     new[] {HintColour.Black, HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.GREEN, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.BLUE, GuessColour.BLUE, GuessColour.BLUE, GuessColour.RED},
+                    new[] {GuessColour.Green, GuessColour.Yellow, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Blue, GuessColour.Blue, GuessColour.Blue, GuessColour.Red},
                     new[] {HintColour.Black, HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.PURPLE, GuessColour.PURPLE, GuessColour.PURPLE, GuessColour.PURPLE},
-                    new[] {GuessColour.BLUE, GuessColour.PURPLE, GuessColour.BLUE, GuessColour.PURPLE},
+                    new[] {GuessColour.Purple, GuessColour.Purple, GuessColour.Purple, GuessColour.Purple},
+                    new[] {GuessColour.Blue, GuessColour.Purple, GuessColour.Blue, GuessColour.Purple},
                     new[] {HintColour.Black, HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.PURPLE, GuessColour.PURPLE, GuessColour.PURPLE},
-                    new[] {GuessColour.RED, GuessColour.PURPLE, GuessColour.BLUE, GuessColour.PURPLE},
+                    new[] {GuessColour.Red, GuessColour.Purple, GuessColour.Purple, GuessColour.Purple},
+                    new[] {GuessColour.Red, GuessColour.Purple, GuessColour.Blue, GuessColour.Purple},
                     new[] {HintColour.Black, HintColour.Black, HintColour.Black}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.GREEN, GuessColour.YELLOW, GuessColour.ORANGE, GuessColour.PURPLE},
-                    new[] {GuessColour.GREEN, GuessColour.PURPLE, GuessColour.ORANGE, GuessColour.PURPLE},
+                    new[] {GuessColour.Green, GuessColour.Yellow, GuessColour.Orange, GuessColour.Purple},
+                    new[] {GuessColour.Green, GuessColour.Purple, GuessColour.Orange, GuessColour.Purple},
                     new[] {HintColour.Black, HintColour.Black, HintColour.Black}
                 },
             };
@@ -141,38 +141,38 @@ namespace MastermindTests
             {
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.RED, GuessColour.RED},
-                    new[] {GuessColour.YELLOW, GuessColour.BLUE, GuessColour.GREEN, GuessColour.ORANGE},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Red, GuessColour.Red},
+                    new[] {GuessColour.Yellow, GuessColour.Blue, GuessColour.Green, GuessColour.Orange},
                     new[] {HintColour.White}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.YELLOW, GuessColour.BLUE, GuessColour.GREEN, GuessColour.ORANGE},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Yellow, GuessColour.Blue, GuessColour.Green, GuessColour.Orange},
                     new[] {HintColour.White, HintColour.White}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED, GuessColour.ORANGE},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Yellow, GuessColour.Blue, GuessColour.Red, GuessColour.Orange},
                     new[] {HintColour.White, HintColour.White, HintColour.White}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.YELLOW, GuessColour.RED, GuessColour.RED, GuessColour.ORANGE},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Yellow, GuessColour.Red, GuessColour.Red, GuessColour.Orange},
                     new[] {HintColour.White, HintColour.White, HintColour.White}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.ORANGE, GuessColour.BLUE},
-                    new[] {GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED, GuessColour.ORANGE},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Orange, GuessColour.Blue},
+                    new[] {GuessColour.Yellow, GuessColour.Blue, GuessColour.Red, GuessColour.Orange},
                     new[] {HintColour.White, HintColour.White, HintColour.White, HintColour.White}
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.PURPLE, GuessColour.BLUE, GuessColour.GREEN},
-                    new[] {GuessColour.BLUE, GuessColour.BLUE, GuessColour.ORANGE, GuessColour.YELLOW},
+                    new[] {GuessColour.Red, GuessColour.Purple, GuessColour.Blue, GuessColour.Green},
+                    new[] {GuessColour.Blue, GuessColour.Blue, GuessColour.Orange, GuessColour.Yellow},
                     new[] {HintColour.White}
                 },
             };
@@ -182,32 +182,32 @@ namespace MastermindTests
             {
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.RED, GuessColour.BLUE},
-                    new[] {GuessColour.RED, GuessColour.BLUE, GuessColour.GREEN, GuessColour.ORANGE},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Red, GuessColour.Blue},
+                    new[] {GuessColour.Red, GuessColour.Blue, GuessColour.Green, GuessColour.Orange},
                     1, 1
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.YELLOW, GuessColour.BLUE, GuessColour.GREEN, GuessColour.RED},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Yellow, GuessColour.Blue, GuessColour.Green, GuessColour.Red},
                     1, 2
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.YELLOW, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.RED, GuessColour.BLUE, GuessColour.GREEN, GuessColour.RED},
+                    new[] {GuessColour.Red, GuessColour.Yellow, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Red, GuessColour.Blue, GuessColour.Green, GuessColour.Red},
                     2, 1
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.GREEN, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.RED, GuessColour.BLUE, GuessColour.GREEN, GuessColour.RED},
+                    new[] {GuessColour.Red, GuessColour.Green, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Red, GuessColour.Blue, GuessColour.Green, GuessColour.Red},
                     2, 2
                 },
                 new object[]
                 {
-                    new[] {GuessColour.RED, GuessColour.GREEN, GuessColour.BLUE, GuessColour.RED},
-                    new[] {GuessColour.RED, GuessColour.BLUE, GuessColour.GREEN, GuessColour.YELLOW},
+                    new[] {GuessColour.Red, GuessColour.Green, GuessColour.Blue, GuessColour.Red},
+                    new[] {GuessColour.Red, GuessColour.Blue, GuessColour.Green, GuessColour.Yellow},
                     1, 2
                 },
             };
