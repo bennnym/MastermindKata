@@ -25,7 +25,7 @@ namespace Mastermind.GameServices.Input.Validator
             {
                 if (!validation.IsValid(usersGuess))
                 {
-                    return new FailingValidation() 
+                    return new FailingValidation()
                     {
                         ErrorMessage = validation.GetErrorMessage()
                     };
@@ -34,7 +34,7 @@ namespace Mastermind.GameServices.Input.Validator
 
             return new SuccessfulValidation();
         }
-        
+
         public GuessColour[] GetValidColours(string usersGuess)
         {
             var colourMatches = new Regex(Constant.RegexColourPattern);

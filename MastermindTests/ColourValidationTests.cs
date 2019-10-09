@@ -22,6 +22,8 @@ namespace MastermindTests
         [InlineData("red orange, orange orange")]
         [InlineData("red red,blue,orange")]
         [InlineData("purple blue green yellow")]
+        [InlineData("PurPle blue grEEn yeLLow")]
+        [InlineData("RED green GREEN PURPLe")]
         public void Should_Return_True_When_User_Has_Entered_Valid_Colours(string input)
         {
             // Act
