@@ -20,7 +20,7 @@ namespace Mastermind
                 new ColourValidation()
             };
 
-            var validator = new InputValidator(validations);
+            var inputValidator = new InputValidator(validations);
             var consoleService = new ConsoleIoService();
             
             var inputProcessor = new InputProcessor(consoleService, validator);
