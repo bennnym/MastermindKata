@@ -1,10 +1,10 @@
 namespace Mastermind.StringMethods
 {
-    public class StringFormatter
+    public static class StringFormatter
     {
-        public static string Capitalize(string input)
+        public static string CapitalizeWord(string input)
         {
-            return char.ToUpper(input[0]) + input.Substring(1, input.Length - 1);
+            return char.ToUpper(input[0]) + input.Substring(1, input.Length - 1).ToLower();
         }
     }
 }

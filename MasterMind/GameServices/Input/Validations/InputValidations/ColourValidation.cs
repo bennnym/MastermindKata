@@ -15,7 +15,7 @@ namespace Mastermind.GameServices.Input.Validations.InputValidations
 
             var validColoursMatched = colourMatches
                 .Matches(userInput)
-                .Select(m => (GuessColour) Enum.Parse(typeof(GuessColour), StringFormatter.Capitalize(m.Value)));
+                .Select(m => (GuessColour) Enum.Parse(typeof(GuessColour), StringFormatter.CapitalizeWord(m.Value)));
             
             return validColoursMatched.Count() == 4;
         }
