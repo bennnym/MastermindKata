@@ -34,7 +34,7 @@ namespace Mastermind.GameServices.Input.Validator
 
             return new SuccessfulValidation();
         }
-
+        
         public GuessColour[] GetValidColours(string usersGuess)
         {
             var colourMatches = new Regex(Constant.RegexColourPattern);
