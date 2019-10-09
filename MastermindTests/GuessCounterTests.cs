@@ -1,6 +1,5 @@
 using Mastermind.Constants;
 using Mastermind.GameServices.Counter;
-using Moq;
 using Xunit;
 
 namespace MastermindTests

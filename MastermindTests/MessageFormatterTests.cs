@@ -20,7 +20,7 @@ namespace MastermindTests
         public void Should_Return_Winning_Message_When_Given_Winning_Hints()
         {
             // Arrange
-            var winningHints = new HintColour[]
+            var winningHints = new []
                 {HintColour.Black, HintColour.Black, HintColour.Black, HintColour.Black};
 
             // Act
