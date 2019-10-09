@@ -23,7 +23,7 @@ namespace Mastermind
             var inputValidator = new InputValidator(validations);
             var consoleService = new ConsoleIoService();
             
-            var inputProcessor = new InputProcessor(consoleService, validator);
+            var inputProcessor = new InputProcessor(consoleService, inputValidator);
             
             var computerPlayer = new ComputerPlayer();
             var game = new Game(computerPlayer);
