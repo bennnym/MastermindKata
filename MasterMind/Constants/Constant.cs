@@ -29,7 +29,7 @@ namespace Mastermind.Constants
         public const string NoCluesPresent = "You didn't guess any correct colours!\n\n";
         public const string CluePrompt = "The clues for your guess are: ";
 
-        public const string RegexColourPattern = @"[rR][eE][Dd]|[Bb][Ll][uU][Ee]|[Gg][Rr][Ee][Ee][Nn]|[Oo][Rr][Aa][Nn][Gg][Ee]|[Pp][Uu][Rr][Pp][Ll][Ee]|[Yy][Ee][Ll][Ll][Oo][Ww]";
+        public const string RegexColourPattern = @"(?i)red|blue|green|yellow|purple|orange(?-i)";
         public const string RegexWordSearchPattern = @"[a-zA-Z]+";
 
         public const int GuessLimit = 60;
