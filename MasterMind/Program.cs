@@ -30,6 +30,7 @@ namespace Mastermind
 
             var messageFormatter = new MessageFormatter();
             var guessCounter = new GuessCounter();
+            
             var gameEngine = new GameEngine(inputProcessor, consoleService, messageFormatter, guessCounter);
             
             gameEngine.Mastermind(game); // method should be a verb!
